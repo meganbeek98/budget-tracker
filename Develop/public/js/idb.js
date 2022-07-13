@@ -1,9 +1,9 @@
 let db;
-const request = indexedDB.open('pizza_hunt', 1);
+const request = indexedDB.open('budget', 1);
 
 request.onupgradeneeded = function(event) {
   const db = event.target.result;
-  db.createObjectStore('new_pizza', { autoIncrement: true });
+  db.createObjectStore('new_budget', { autoIncrement: true });
 };
 
 request.onsuccess = function(event) {
@@ -22,9 +22,9 @@ request.onerror = function(event) {
 };
 
 function saveRecord(record) {
-  const transaction = db.transaction(['new_pizza'], 'readwrite');
+  const transaction = db.transaction(['new_budget'], 'readwrite');
 
-  const pizzaObjectStore = transaction.objectStore('new_pizza');
+  const pizzaObjectStore = transaction.objectStore('new_budget');
 
   // add record to your store with add method.
   pizzaObjectStore.add(record);
@@ -32,10 +32,10 @@ function saveRecord(record) {
 
 function uploadPizza() {
   // open a transaction on your pending db
-  const transaction = db.transaction(['new_pizza'], 'readwrite');
+  const transaction = db.transaction(['new_budget'], 'readwrite');
 
   // access your pending object store
-  const pizzaObjectStore = transaction.objectStore('new_pizza');
+  const pizzaObjectStore = transaction.objectStore('new_budget');
 
   // get all records from store and set to a variable
   const getAll = pizzaObjectStore.getAll();
@@ -57,8 +57,8 @@ function uploadPizza() {
             throw new Error(serverResponse);
           }
 
-          const transaction = db.transaction(['new_pizza'], 'readwrite');
-          const pizzaObjectStore = transaction.objectStore('new_pizza');
+          const transaction = db.transaction(['new_budget'], 'readwrite');
+          const pizzaObjectStore = transaction.objectStore('new_budget');
           // clear all items in your store
           pizzaObjectStore.clear();
         })
