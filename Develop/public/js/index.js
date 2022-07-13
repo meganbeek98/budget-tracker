@@ -144,18 +144,6 @@ function sendTransaction(isAdding) {
   });
 }
 
-// additions here
-function(text) {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('./service-worker.js')
-      .then(() => console.log('Service Worker registered successfully.'))
-      .catch(error =>
-        console.log('Service Worker registration failed:', error)
-      );
-  }
-};
-
 document.querySelector("#add-btn").onclick = function() {
   sendTransaction(true);
 };

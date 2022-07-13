@@ -18,7 +18,7 @@ const FILES_TO_CACHE = [
   '/js/index.js'
 ];
 
-// Install the service worker
+// INSTALL the service worker
 self.addEventListener('install', function(evt) {
   evt.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
@@ -30,7 +30,7 @@ self.addEventListener('install', function(evt) {
   self.skipWaiting();
 });
 
-// Activate the service worker and remove old data from the cache
+// ACTIVATE the service worker / remove old data from cache
 self.addEventListener('activate', function(evt) {
   evt.waitUntil(
     caches.keys().then(keyList => {
