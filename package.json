@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/meganbeek98/budget-tracker/issues"
   },
-  "homepage": "https://github.com/meganbeek98/budget-tracker#readme",
+  "homepage": "https://github.com/meganbeek98/budget-tracker#index.html",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.18.1",
