@@ -31,8 +31,6 @@ OSU Coding Bootcamp Challenge 19
 ## Links
 [GitHub Repository](https://github.com/meganbeek98/budget-tracker.git)
 
-[GitHub Pages Deployment](https://meganbeek98.github.io/budget-tracker/)
-
 [Heroku Deployment](https://meganbeek98-budget-tracker.herokuapp.com/)
 
 ------------------------------------------------------------
